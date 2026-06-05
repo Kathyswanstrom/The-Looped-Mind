@@ -60,6 +60,34 @@ function Hero() {
       </div>
     </section>
   );
+}"rect(0,0,0,0)", border: 0 }}>
+          The Looped Mind — Built to Imagine. Wired to Repeat.
+        </h1>
+
+        <div
+          style={{
+            background: "#ffffff",
+            borderRadius: 18,
+            padding: "30px",
+            width: "100%",
+            maxWidth: 560,
+            boxShadow: "0 34px 90px rgba(0,0,0,0.4)",
+          }}
+        >
+          <img
+            src="/looped-mind-logo.svg"
+            alt="The Looped Mind — Built to Imagine. Wired to Repeat. The home of serial entrepreneurs. theloopedmind.com"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
+
+        <div className="hero-actions" style={{ justifyContent: "center" }}>
+          <a href="#memoir" className="btn btn-gold">Read the memoir</a>
+          <a href="#loop" className="btn btn-ghost">See the loop</a>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 function Loop() {
