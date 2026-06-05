@@ -28,58 +28,34 @@ function LoopMark() {
 function Hero() {
   return (
     <section className="hero" id="top">
-      <div className="wrap hero-grid">
-        <div className="hero-copy">
-          <span className="eyebrow on-dark">For the serial entrepreneur</span>
-          <h1>
-            The <span className="loop-word">Looped</span> Mind
-          </h1>
-          <p className="hero-tag">Built to Imagine. Wired to Repeat.</p>
-          <p className="hero-sub">
-            For the one who finishes one venture and immediately starts the next.
-            A memoir, a framework, and field guides for the way you already work.
-          </p>
-          <div className="hero-actions">
-            <a href="#memoir" className="btn btn-gold">Read the memoir</a>
-            <a href="#loop" className="btn btn-ghost">See the loop</a>
-          </div>
+      <div
+        className="wrap"
+        style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 34 }}
+      >
+        <h1 style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0,0,0,0)", border: 0 }}>
+          The Looped Mind — Built to Imagine. Wired to Repeat.
+        </h1>
+
+        <div
+          style={{
+            background: "#ffffff",
+            borderRadius: 18,
+            padding: "30px",
+            width: "100%",
+            maxWidth: 560,
+            boxShadow: "0 34px 90px rgba(0,0,0,0.4)",
+          }}
+        >
+          <img
+            src="/looped-mind-logo.svg"
+            alt="The Looped Mind — Built to Imagine. Wired to Repeat. The home of serial entrepreneurs. theloopedmind.com"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
         </div>
 
-        <div className="loop-stage">
-          <svg className="loop-svg" viewBox="0 0 500 500" aria-label="The loop: Imagine, Build, Launch, Learn">
-            <g className="loop-ring-spin">
-              <circle className="loop-dash" cx="250" cy="250" r="210" />
-            </g>
-            <circle className="loop-track" cx="250" cy="250" r="160" />
-            {/* clockwise arc connecting the stages */}
-            <path
-              className="loop-arc"
-              d="M250 90 A160 160 0 0 1 410 250 A160 160 0 0 1 250 410 A160 160 0 0 1 90 250 A160 160 0 0 1 250 90"
-            />
-
-            {/* nodes: top / right / bottom / left */}
-            <g className="loop-node">
-              <circle cx="250" cy="90" r="46" />
-              <text x="250" y="90">Imagine</text>
-            </g>
-            <g className="loop-node">
-              <circle cx="410" cy="250" r="46" />
-              <text x="410" y="250">Build</text>
-            </g>
-            <g className="loop-node">
-              <circle cx="250" cy="410" r="46" />
-              <text x="250" y="410">Launch</text>
-            </g>
-            <g className="loop-node">
-              <circle cx="90" cy="250" r="46" />
-              <text x="90" y="250">Learn</text>
-            </g>
-
-            <g className="loop-center">
-              <text x="250" y="244" fontSize="22" textAnchor="middle">again</text>
-              <text x="250" y="270" fontSize="22" textAnchor="middle">&amp; again</text>
-            </g>
-          </svg>
+        <div className="hero-actions" style={{ justifyContent: "center" }}>
+          <a href="#memoir" className="btn btn-gold">Read the memoir</a>
+          <a href="#loop" className="btn btn-ghost">See the loop</a>
         </div>
       </div>
     </section>
