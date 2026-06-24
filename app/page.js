@@ -46,7 +46,14 @@ function Hero() {
         </div>
 
         <div className="hero-actions" style={{ justifyContent: "center" }}>
-          <a href="#memoir" className="btn btn-gold">Read the memoir</a>
+          <a
+            href="https://www.amazon.com/dp/B0H6H2VDPS"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-gold"
+          >
+            Get the book on Amazon
+          </a>
           <a href="#loop" className="btn btn-ghost">See the loop</a>
         </div>
       </div>
@@ -82,18 +89,51 @@ function Loop() {
 }
 
 function Memoir() {
+  const AMAZON = "https://www.amazon.com/dp/B0H6H2VDPS";
   return (
     <section className="section memoir" id="memoir">
       <div className="wrap memoir-grid">
         <div className="reveal">
-          <div className="book">
-            <div className="book-top">A Looped Mind Memoir</div>
-            <div className="book-title">Every Business Teaches You the Next One</div>
-            <div className="book-author">Kathy Swanstrom</div>
-          </div>
+          <a
+            href={AMAZON}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ position: "relative", display: "block", maxWidth: 330, margin: "0 auto" }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                top: 14,
+                right: -10,
+                zIndex: 2,
+                background: "#c5a352",
+                color: "#101a30",
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase",
+                padding: "7px 13px",
+                borderRadius: 2,
+                boxShadow: "0 10px 22px rgba(0,0,0,0.4)",
+              }}
+            >
+              Now on Amazon
+            </div>
+            <img
+              src="/book-cover.jpg"
+              alt="Every Business Teaches You the Next One — a Looped Mind memoir by Kathy Swanstrom"
+              style={{
+                width: "100%",
+                height: "auto",
+                display: "block",
+                borderRadius: 4,
+                boxShadow: "0 40px 80px rgba(0,0,0,0.5)",
+              }}
+            />
+          </a>
         </div>
         <div className="reveal">
-          <span className="eyebrow on-dark">The memoir</span>
+          <span className="eyebrow on-dark">The memoir · Now on Amazon</span>
           <h2>Ten letters from inside the loop.</h2>
           <p>
             Not a how-to. A field account from someone who kept going around —
@@ -104,6 +144,9 @@ function Memoir() {
             Every business taught her the next one. The failures as much as the
             wins. This is the record of what carried over.
           </p>
+          <p style={{ color: "var(--gold-bright)", fontWeight: 500 }}>
+            It&rsquo;s live on Amazon. Go grab a copy.
+          </p>
           <div className="letters">
             <span className="letter-chip">Imagine</span>
             <span className="letter-chip">Build</span>
@@ -111,7 +154,10 @@ function Memoir() {
             <span className="letter-chip">Learn</span>
           </div>
           <div className="hero-actions">
-            <a href="#signup" className="btn btn-gold">Join the launch list</a>
+            <a href={AMAZON} target="_blank" rel="noopener noreferrer" className="btn btn-gold">
+              Get it on Amazon
+            </a>
+            <a href="#signup" className="btn btn-ghost">Join the list</a>
           </div>
         </div>
       </div>
