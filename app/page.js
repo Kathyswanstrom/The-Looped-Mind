@@ -17,11 +17,12 @@ const TRAITS = [
 
 function LoopMark() {
   return (
-    <svg className="nav-mark" viewBox="0 0 40 40" aria-hidden="true">
-      <circle cx="20" cy="20" r="15" fill="none" stroke="#c5a352" strokeWidth="2.4" />
-      <path d="M20 5 a15 15 0 0 1 13 7.5" fill="none" stroke="#d8b865" strokeWidth="2.4" strokeLinecap="round" />
-      <circle cx="33" cy="12.5" r="2.6" fill="#d8b865" />
-    </svg>
+    <img
+      src="/logo-symbol-gold.png"
+      alt=""
+      aria-hidden="true"
+      style={{ width: 26, height: "auto", display: "block" }}
+    />
   );
 }
 
@@ -36,18 +37,9 @@ function Hero() {
           The Looped Mind — Built to Imagine. Wired to Repeat.
         </h1>
 
-        <div
-          style={{
-            background: "#ffffff",
-            borderRadius: 18,
-            padding: "30px",
-            width: "100%",
-            maxWidth: 560,
-            boxShadow: "0 34px 90px rgba(0,0,0,0.4)",
-          }}
-        >
+        <div style={{ width: "100%", maxWidth: 520 }}>
           <img
-            src="/looped-mind-logo.svg"
+            src="/logo-full-white.png"
             alt="The Looped Mind — Built to Imagine. Wired to Repeat. The home of serial entrepreneurs. theloopedmind.com"
             style={{ width: "100%", height: "auto", display: "block" }}
           />
@@ -298,7 +290,7 @@ export default function Page() {
           <a href="#loop">The Loop</a>
           <a href="#memoir">Memoir</a>
           <a href="#traits">Trait Packs</a>
-          <a href="#about">About</a>
+          <a href="/share-your-story">Your Story</a>
           <a href="#signup" className="nav-cta">Join the list</a>
         </div>
       </nav>
