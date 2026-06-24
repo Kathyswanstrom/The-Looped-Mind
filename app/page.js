@@ -11,7 +11,7 @@ const STAGES = [
 
 const TRAITS = [
   { vol: "Volume 01", t: "Vision", d: "Seeing the thing before anyone else does. The picture that pulls a venture into being.", live: false },
-  { vol: "Volume 02", t: "Curiosity", d: "The engine of the loop. Why you can't leave a good question alone.", live: true },
+  { vol: "Volume 02", t: "Curiosity", d: "The engine of the loop. Why you can't leave a good question alone.", live: false },
   { vol: "Volume 03", t: "Resilience", d: "What gets you through the gap between the idea and the thing.", live: false },
 ];
 
