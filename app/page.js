@@ -10,9 +10,9 @@ const STAGES = [
 ];
 
 const TRAITS = [
+  { vol: "Volume 01", t: "Vision", d: "Seeing the thing before anyone else does. The picture that pulls a venture into being.", live: false },
   { vol: "Volume 02", t: "Curiosity", d: "The engine of the loop. Why you can't leave a good question alone.", live: true },
   { vol: "Volume 03", t: "Resilience", d: "What gets you through the gap between the idea and the thing.", live: false },
-  { vol: "Volume 04", t: "Resourcefulness", d: "Building with what's in the room instead of what's on the wishlist.", live: false },
 ];
 
 function LoopMark() {
