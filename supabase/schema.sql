@@ -23,3 +23,30 @@ create policy "Allow anonymous signups"
   for insert
   to anon
   with check (true);
+
+
+-- ============================================================
+-- Stories submitted from the "Tell Me Your Story" page
+-- (/share-your-story). Run this block the same way: paste into
+-- Supabase SQL Editor and Run.
+-- ============================================================
+create table if not exists public.stories (
+  id            uuid primary key default gen_random_uuid(),
+  name          text,
+  email         text,
+  loop_start    text,
+  building_now  text,
+  next_idea     text,
+  story         text,
+  consent       boolean not null default false,
+  created_at    timestamptz not null default now()
+);
+
+alter table public.stories enable row level security;
+
+drop policy if exists "Allow anonymous story submissions" on public.stories;
+create policy "Allow anonymous story submissions"
+  on public.stories
+  for insert
+  to anon
+  with check (true);
