@@ -18,6 +18,14 @@ const CSS = `
   .story-page .loop span{color:var(--gold); margin:0 7px;}
   .story-page .tagline{color:var(--navy); font-style:italic; font-size:14px; letter-spacing:.04em;}
   .story-page .rule{height:2px; background:var(--gold); border:0; margin:22px auto; max-width:120px;}
+
+  .story-nav{position:sticky; top:0; z-index:30; background:var(--navy); border-bottom:1px solid rgba(168,132,44,.4);}
+  .story-nav .inner{max-width:680px; margin:0 auto; padding:13px 22px; display:flex; align-items:center; justify-content:space-between; gap:16px;}
+  .story-nav a.brand{font-family:var(--serif); font-style:italic; color:#E0C684; font-size:18px; text-decoration:none; white-space:nowrap;}
+  .story-nav .links{display:flex; gap:20px; align-items:center;}
+  .story-nav .links a{font-family:var(--serif); font-size:14px; color:#fff; text-decoration:none;}
+  .story-nav .links a:hover{color:#E0C684;}
+  @media (max-width:520px){ .story-nav .links a.hide-sm{display:none;} }
   .story-page h1{font-size:40px; line-height:1.1; color:var(--navy); margin:6px 0 4px; text-align:center;}
   .story-page .sub{text-align:center; font-style:italic; color:var(--navy); font-size:19px; margin:0 0 26px;}
   .story-page p.intro{font-size:17px; margin:0 0 14px;}
@@ -92,6 +100,16 @@ export default function ShareYourStory() {
   return (
     <div className="story-page">
       <style>{CSS}</style>
+      <div className="story-nav">
+        <div className="inner">
+          <a href="/" className="brand">The Looped Mind</a>
+          <nav className="links">
+            <a href="/">Home</a>
+            <a href="/be-a-guest" className="hide-sm">Be a Guest</a>
+            <a href="https://www.amazon.com/dp/B0H6H2VDPS" target="_blank" rel="noopener noreferrer">The Book</a>
+          </nav>
+        </div>
+      </div>
       <div className="wrap">
         <header>
           <div className="eyebrow">— The Looped Mind —</div>
@@ -183,3 +201,4 @@ export default function ShareYourStory() {
     </div>
   );
 }
+
