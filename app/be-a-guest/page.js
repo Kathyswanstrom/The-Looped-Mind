@@ -18,6 +18,15 @@ const CSS = `
   .guest-page .eyebrow{font-family:var(--util); font-size:12px; font-weight:600; letter-spacing:.26em; text-transform:uppercase; color:var(--gold);}
   .guest-page h1,.guest-page h2{font-family:var(--display); font-weight:500; line-height:1.12; letter-spacing:-.01em;}
 
+  /* header bar */
+  .guest-nav{position:sticky; top:0; z-index:30; background:var(--deep); border-bottom:1px solid rgba(224,198,132,.2);}
+  .guest-nav .inner{max-width:760px; margin:0 auto; padding:13px 24px; display:flex; align-items:center; justify-content:space-between; gap:16px;}
+  .guest-nav a.brand{font-family:var(--display); font-style:italic; color:var(--golds); font-size:18px; text-decoration:none; white-space:nowrap;}
+  .guest-nav .links{display:flex; gap:20px; align-items:center;}
+  .guest-nav .links a{font-family:var(--util); font-size:13px; font-weight:600; letter-spacing:.03em; color:rgba(245,238,220,.85); text-decoration:none;}
+  .guest-nav .links a:hover{color:var(--golds);}
+  @media (max-width:520px){ .guest-nav .links a.hide-sm{display:none;} .guest-nav a.brand{font-size:16px;} }
+
   /* hero */
   .guest-hero{background:radial-gradient(120% 120% at 50% 0%, var(--navy2), var(--ink) 55%, var(--deep)); color:var(--cream); text-align:center; padding:84px 0 70px;}
   .guest-hero .eyebrow{color:var(--golds);}
@@ -157,6 +166,17 @@ export default function BeAGuest() {
   return (
     <div className="guest-page">
       <style>{CSS}</style>
+
+      <header className="guest-nav">
+        <div className="inner">
+          <a href="/" className="brand">The Looped Mind</a>
+          <nav className="links">
+            <a href="/">Home</a>
+            <a href="/share-your-story" className="hide-sm">Your Story</a>
+            <a href="/#memoir">The Book</a>
+          </nav>
+        </div>
+      </header>
 
       <section className="guest-hero">
         <div className="wrap">
