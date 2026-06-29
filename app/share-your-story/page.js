@@ -106,7 +106,7 @@ export default function ShareYourStory() {
           <nav className="links">
             <a href="/">Home</a>
             <a href="/be-a-guest" className="hide-sm">Be a Guest</a>
-            <a href="https://www.amazon.com/dp/B0H6H2VDPS" target="_blank" rel="noopener noreferrer">The Book</a>
+            <a href="/#memoir">The Book</a>
           </nav>
         </div>
       </div>
@@ -201,4 +201,3 @@ export default function ShareYourStory() {
     </div>
   );
 }
-
