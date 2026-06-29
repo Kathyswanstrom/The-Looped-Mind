@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -28,22 +27,61 @@ function LoopMark() {
 }
 
 function Hero() {
+  const ringWords =
+    "IMAGINE\u00A0\u00A0\u25C6\u00A0\u00A0BUILD\u00A0\u00A0\u25C6\u00A0\u00A0LAUNCH\u00A0\u00A0\u25C6\u00A0\u00A0LEARN\u00A0\u00A0\u25C6\u00A0\u00A0REPEAT\u00A0\u00A0\u25C6\u00A0\u00A0";
   return (
     <section className="hero" id="top">
+      <style>{`
+        @keyframes lmspin { to { transform: rotate(360deg); } }
+        .lm-loop { transform-origin: 200px 200px; animation: lmspin 34s linear infinite; }
+        @media (prefers-reduced-motion: reduce){ .lm-loop { animation: none; } }
+      `}</style>
       <div
         className="wrap"
-        style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 34 }}
+        style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: 30 }}
       >
         <h1 style={{ position: "absolute", width: 1, height: 1, padding: 0, margin: -1, overflow: "hidden", clip: "rect(0,0,0,0)", border: 0 }}>
           The Looped Mind — Built to Imagine. Wired to Repeat.
         </h1>
 
-        <div style={{ width: "100%", maxWidth: 520 }}>
+        <div style={{ position: "relative", width: "100%", maxWidth: 440 }}>
           <img
-            src="/logo-full-white.png"
-            alt="The Looped Mind — Built to Imagine. Wired to Repeat. The home of serial entrepreneurs. theloopedmind.com"
+            src="/logo-head-white.png"
+            alt="The Looped Mind"
             style={{ width: "100%", height: "auto", display: "block" }}
           />
+          <div style={{ position: "absolute", left: "54%", top: "47%", width: "78%", transform: "translate(-50%,-50%)" }}>
+            <svg viewBox="0 0 400 400" style={{ width: "100%", height: "auto", display: "block" }} aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <path id="lmring" d="M200,60 a140,140 0 1,1 -0.01,0" fill="none" />
+              </defs>
+              <g className="lm-loop">
+                <circle cx="200" cy="200" r="166" fill="none" stroke="#c5a352" strokeWidth="1.4" opacity="0.4" />
+                <g fill="#d8b865">
+                  <circle cx="200" cy="34" r="6" />
+                  <circle cx="358" cy="149" r="6" />
+                  <circle cx="298" cy="336" r="6" />
+                  <circle cx="102" cy="336" r="6" />
+                  <circle cx="42" cy="149" r="6" />
+                </g>
+                <text fontFamily="Inter, sans-serif" fontSize="21" letterSpacing="5" fontWeight="600" fill="#d8b865">
+                  <textPath href="#lmring" startOffset="0">{ringWords}</textPath>
+                </text>
+              </g>
+              <text x="200" y="182" textAnchor="middle" fontFamily="Fraunces, Georgia, serif" fontSize="20" letterSpacing="5" fill="#c5a352">THE</text>
+              <text x="200" y="216" textAnchor="middle" fontFamily="Fraunces, Georgia, serif" fontSize="36" fontWeight="600" fill="#f4efe2">LOOPED</text>
+              <text x="200" y="250" textAnchor="middle" fontFamily="Fraunces, Georgia, serif" fontSize="36" fontWeight="600" fill="#d8b865">MIND</text>
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <div style={{ fontFamily: "Inter, sans-serif", color: "#d8b865", letterSpacing: ".22em", textTransform: "uppercase", fontSize: 13, fontWeight: 600 }}>
+            Built to Imagine. Wired to Repeat.
+          </div>
+          <div style={{ fontFamily: "Inter, sans-serif", color: "rgba(244,239,226,0.6)", letterSpacing: ".18em", textTransform: "uppercase", fontSize: 11, marginTop: 8 }}>
+            The home of the serial entrepreneurs
+          </div>
         </div>
 
         <div className="hero-actions" style={{ justifyContent: "center" }}>
@@ -400,3 +438,4 @@ export default function Page() {
     </>
   );
 }
+
