@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -223,6 +224,51 @@ function About() {
   );
 }
 
+function Community() {
+  const card = {
+    background: "rgba(255,255,255,0.04)",
+    border: "1px solid rgba(197,163,82,0.3)",
+    borderRadius: 12,
+    padding: "22px",
+  };
+  const cardTitle = { fontFamily: "Fraunces, Georgia, serif", fontSize: 20, color: "#d8b865", marginBottom: 6 };
+  const cardText = { margin: 0, fontSize: 15, color: "rgba(244,239,226,0.8)" };
+
+  return (
+    <section className="section" id="community" style={{ background: "#11203c", color: "#f4efe2" }}>
+      <div className="wrap">
+        <span className="eyebrow on-dark">The community</span>
+        <h2 style={{ color: "#f4efe2" }}>The home of the serial entrepreneurs has a home.</h2>
+        <p style={{ color: "rgba(244,239,226,0.82)", maxWidth: 620 }}>
+          The Community Wall is a place to post your wins, the loop you&rsquo;re in, and the lessons each
+          venture handed forward — and to read other looped minds who think of the next thing before the
+          last one&rsquo;s finished.
+        </p>
+
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))",
+            gap: 18,
+            margin: "28px 0 30px",
+          }}
+        >
+          <div style={card}>
+            <div style={cardTitle}>Share your loop</div>
+            <p style={cardText}>Post a win, a struggle, or a lesson — first name is fine.</p>
+          </div>
+          <div style={card}>
+            <div style={cardTitle}>Read the room</div>
+            <p style={cardText}>A curated wall of real stories from people who get it.</p>
+          </div>
+        </div>
+
+        <a href="/community" className="btn btn-gold">Visit the community</a>
+      </div>
+    </section>
+  );
+}
+
 function Signup() {
   const [email, setEmail] = useState("");
   const [state, setState] = useState({ status: "idle", msg: "" });
@@ -336,6 +382,7 @@ export default function Page() {
           <a href="#loop">The Loop</a>
           <a href="#memoir">Memoir</a>
           <a href="#traits">Trait Packs</a>
+          <a href="/community">Community</a>
           <a href="/be-a-guest">Be a Guest</a>
           <a href="/share-your-story">Your Story</a>
           <a href="#signup" className="nav-cta">Join the list</a>
@@ -347,6 +394,7 @@ export default function Page() {
       <Memoir />
       <Traits />
       <About />
+      <Community />
       <Signup />
       <Footer />
     </>
