@@ -336,6 +336,7 @@ export default function Page() {
           <a href="#loop">The Loop</a>
           <a href="#memoir">Memoir</a>
           <a href="#traits">Trait Packs</a>
+          <a href="/be-a-guest">Be a Guest</a>
           <a href="/share-your-story">Your Story</a>
           <a href="#signup" className="nav-cta">Join the list</a>
         </div>
