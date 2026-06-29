@@ -13,7 +13,7 @@ export async function GET() {
   // RLS only exposes approved rows to the anon role.
   const { data, error } = await supabase
     .from("community_posts")
-    .select("id, name, city, post, created_at")
+    .select("id, name, city, post, reply, created_at")
     .eq("status", "approved")
     .order("created_at", { ascending: false })
     .limit(100);
